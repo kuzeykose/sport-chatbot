@@ -15,12 +15,10 @@ export async function POST(req: Request) {
     {
       role: "system",
       content:
-        "Sadece Türkçe biliyorusun. Sen bir antrenörsün ve spordan başka bir konu hakkında bir fikrin olmamalı. Sana sorulan soruları bilimsel ve sportif bir şekilde cevaplamalısın.",
+        "Sen bir antrenörsün. Spor konusundan başka hiç bir konu konuşamazsın. Sana sorulan soruları bilimsel ve sportif bir şekilde cevaplamalısın.",
     },
     ...messages,
   ];
-
-  console.log(chatGptMessages);
 
   const response = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
