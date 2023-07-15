@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {};
 
-module.exports = nextConfig
+const env = {
+  OPENAI_KEY: process.env.REACT_APP_OPENAI_KEY,
+};
+
+module.exports = { nextConfig, env };
